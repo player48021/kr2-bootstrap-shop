@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpeakUp — онлайн-школа английского языка. Первый урок бесплатно.">
     <title>SpeakUp — Онлайн-школа английского языка</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Локальное подключение Bootstrap -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Кастомные стили -->
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
@@ -37,6 +40,15 @@
                     <li class="nav-item"><a class="nav-link" href="catalog.html">Курсы</a></li>
                     <li class="nav-item"><a class="nav-link" href="product.html">Курс</a></li>
                     <li class="nav-item"><a class="nav-link" href="order.html">Запись на урок</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Дополнительно</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="catalog.html">Все курсы</a></li>
+                            <li><a class="dropdown-item" href="order.html">Оставить заявку</a></li>
+                            <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -53,15 +65,50 @@
                     <a class="btn btn-primary btn-lg" href="catalog.html">Выбрать курс</a>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="placeholder-box p-5 bg-light border rounded text-center d-flex align-items-center justify-content-center">
+                    <div class="placeholder-box p-5 border rounded text-center d-flex align-items-center justify-content-center">
                         <p class="mb-0 text-muted">Здесь может быть фото преподавателя или промо-баннер.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Блок преимуществ -->
+        <!-- Карусель с отзывами (самостоятельная доработка) -->
         <section class="container my-5">
+            <h2 class="text-center mb-4">Отзывы учеников</h2>
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <div class="p-5 text-center">
+                            <p class="quote">«За 3 месяца подготовки сдал IELTS на 7.5. Огромное спасибо SpeakUp!»</p>
+                            <p class="author">— Алексей, 24 года</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="p-5 text-center">
+                            <p class="quote">«Наконец-то начала свободно говорить на английском. Занятия проходят легко и интересно.»</p>
+                            <p class="author">— Мария, 31 год</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="p-5 text-center">
+                            <p class="quote">«Бизнес-английский помог мне пройти собеседование в международную компанию.»</p>
+                            <p class="author">— Дмитрий, 28 лет</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Блок преимуществ -->
+        <section class="container my-5" id="advantages">
             <h2 class="text-center mb-4">Почему выбирают SpeakUp</h2>
             <div class="row g-4">
                 <div class="col-12 col-md-4">
@@ -86,13 +133,12 @@
         </section>
 
         <!-- Популярные курсы -->
-        <section class="container my-5">
+        <section class="container my-5" id="popular">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="mb-0">Популярные курсы</h2>
                 <a class="btn btn-outline-primary" href="catalog.html">Все курсы</a>
             </div>
             <div class="row g-4">
-                <!-- Курс 1 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="border rounded h-100 p-4 bg-white shadow-sm d-flex flex-column">
                         <span class="badge bg-success mb-3 align-self-start">Хит</span>
@@ -102,7 +148,6 @@
                         <a class="btn btn-primary" href="product.html">Подробнее</a>
                     </div>
                 </div>
-                <!-- Курс 2 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="border rounded h-100 p-4 bg-white shadow-sm d-flex flex-column">
                         <span class="badge bg-warning text-dark mb-3 align-self-start">Новинка</span>
@@ -112,7 +157,6 @@
                         <a class="btn btn-primary" href="product.html">Подробнее</a>
                     </div>
                 </div>
-                <!-- Курс 3 -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="border rounded h-100 p-4 bg-white shadow-sm d-flex flex-column">
                         <span class="badge bg-danger mb-3 align-self-start">Скидка</span>
@@ -131,7 +175,7 @@
         <div class="container">
             <div class="row align-items-center g-3">
                 <div class="col-12 col-md-6">
-                    <p class="mb-0">&copy; 2026 SpeakUp. Учебный проект.</p>
+                    <p class="mb-0">&copy; 2026 SpeakUp. Учебный проект. Войнов М.О., ЭФБО-14-25</p>
                 </div>
                 <div class="col-12 col-md-6 text-md-end">
                     <a class="text-white text-decoration-none me-3" href="catalog.html">Курсы</a>
@@ -141,6 +185,7 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Локальное подключение Bootstrap JS -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
