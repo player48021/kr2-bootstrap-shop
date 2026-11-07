@@ -1,16 +1,16 @@
 /* Кастомные стили для SpeakUp */
 :root {
-    /* Сделали фиолетовый менее "токсичным", ушли в благородный индиго */
-    --speakup-primary: #5c4be5; 
-    --speakup-primary-dark: #4335b8;
-    /* Фон для блоков сделали чуть более ярким и приятным (лавандовый) */
-    --speakup-light: #f4f0ff; 
-    --speakup-gray: #e9ecef;
+    /* Спокойный, благородный синий цвет */
+    --speakup-primary: #3b5998; 
+    --speakup-primary-dark: #2d4373;
+    /* Мягкий фон */
+    --speakup-light: #f8f9fa; 
 }
 
 body {
     min-height: 100vh;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #ffffff; 
 }
 
 /* --- Цвета --- */
@@ -32,33 +32,34 @@ body {
     border-color: var(--speakup-primary-dark);
 }
 
-/* --- Глобальный эффект для кнопок (Скейл) --- */
+/* --- Плавные анимации --- */
 .btn {
     transition: all 0.3s ease;
 }
 .btn:hover {
-    transform: scale(1.05); /* Легкое увеличение при наведении */
+    transform: scale(1.03);
 }
 
-/* --- Карточки (Преимущества, Курсы, Отзывы) --- */
+/* --- Карточки --- */
 .card, .p-4.border.rounded {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-color: #dee2e6 !important;
+    border: 1px solid #e0e0e0 !important;
+    background-color: #fff;
+    border-radius: 10px; /* Более мягкие углы */
 }
 
 .card:hover, .p-4.border.rounded:hover {
-    transform: scale(1.02) translateY(-5px); /* Приподнимаем и увеличиваем */
-    box-shadow: 0 10px 20px rgba(92, 75, 229, 0.15) !important; /* Синеватая тень */
-    border-color: var(--speakup-primary) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important; 
+    border-color: #ccc !important;
 }
 
-/* --- Карусель (Отзывы) --- */
+/* --- Карусель --- */
 .carousel-item {
     min-height: 250px;
     background-color: var(--speakup-light);
 }
 
-/* Делаем стрелочки карусели синеватыми */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: var(--speakup-primary);
@@ -66,7 +67,6 @@ body {
     padding: 20px;
     background-size: 50%;
 }
-
 .carousel-control-prev:hover .carousel-control-prev-icon,
 .carousel-control-next:hover .carousel-control-next-icon {
     background-color: var(--speakup-primary-dark);
@@ -77,35 +77,40 @@ body {
     font-style: italic;
     color: #333;
 }
-
 .carousel-item .author {
     font-weight: 600;
     color: var(--speakup-primary);
 }
 
-/* --- Аккордеон (Частые вопросы) --- */
+/* --- Аккордеон --- */
 .accordion-button {
     font-weight: 600;
-    color: #222; /* Вопрос темнее */
+    color: #222;
 }
-
 .accordion-button:not(.collapsed) {
-    background-color: var(--speakup-light);
-    color: var(--speakup-primary-dark);
+    background-color: #eef2f7;
+    color: var(--speakup-primary);
 }
-
 .accordion-body {
-    color: #555; /* Ответ светлее, чтобы фокус был на вопросе */
+    color: #555;
     line-height: 1.6;
 }
 
-/* --- Изображения --- */
+/* --- БОЛЬШИЕ ИЗОБРАЖЕНИЯ (Главная и Страница курса) --- */
 .placeholder-box {
     min-height: 240px;
     background-color: var(--speakup-light);
+    border: 1px dashed #ccc;
+    border-radius: 10px;
 }
 
-/* Блок для картинки в hero-блоке */
+.placeholder-image {
+    min-height: 350px;
+    background-color: var(--speakup-light);
+    border: 1px dashed #ccc;
+    border-radius: 12px;
+}
+
 .hero-img {
     width: 100%;
     max-height: 400px;
@@ -114,22 +119,27 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* Блок для картинки товара/курса на странице product.html */
-.placeholder-image {
-    min-height: 350px;
-    background-color: var(--speakup-light);
-}
-
 .product-img {
     width: 100%;
     height: 100%;
     min-height: 350px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
-/* Картинки внутри карточек курсов (в каталоге) */
-.card-img-top {
-    height: 180px;
+/* --- МАЛЕНЬКИЕ ФОТОГРАФИИ ДЛЯ КАТАЛОГА (Зеленые кружочки) --- */
+.course-thumbnail {
+    width: 80px;
+    height: 80px;
     object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.course-thumbnail-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: var(--speakup-light);
+    border: 1px dashed #ccc;
+    border-radius: 8px;
 }
