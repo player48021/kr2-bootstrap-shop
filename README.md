@@ -71,3 +71,6 @@ kr2-bootstrap-shop/
 
 ## Ссылка на репозиторий
 https://github.com/player48021/kr2-bootstrap-shop
+
+## Ссылка на опубликованный сайт (GitHub Pages)
+https://player48021.github.io/kr2-bootstrap-shop/
