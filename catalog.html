@@ -38,7 +38,7 @@
     </nav>
 
     <main class="flex-grow-1 container my-5">
-        <div class="alert alert-info" role="alert">
+        <div class="alert alert-info border-info shadow-sm" role="alert">
             Выберите курс. Карточки оформлены с помощью компонента Bootstrap <strong>card</strong>.
         </div>
 
@@ -48,53 +48,88 @@
         </div>
 
         <div class="row g-4">
+            <!-- КУРС 1: Разговорный -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="images/ph2.jpg" class="card-img-top" alt="Разговорный английский" onerror="this.style.display='none'">
                     <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h2 class="card-title h5 mb-0">Разговорный английский</h2>
-                            <span class="badge bg-success">Хит</span>
+                        <!-- Блок с картинкой и заголовком -->
+                        <div class="d-flex align-items-start mb-3">
+                            <!-- Миниатюра (квадратная) -->
+                            <div class="me-3 flex-shrink-0">
+                                <img src="images/ph2.jpg" class="course-thumbnail" alt="Разговорный" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="course-thumbnail-placeholder align-items-center justify-content-center" style="display:none;">
+                                    <small class="text-muted">Фото</small>
+                                </div>
+                            </div>
+                            <!-- Заголовок и бейдж -->
+                            <div>
+                                <h2 class="card-title h5 mb-1">Разговорный английский</h2>
+                                <span class="badge bg-success">Хит</span>
+                            </div>
                         </div>
-                        <p class="card-text text-muted">Практика речи с носителем языка в мини-группах.</p>
-                        <p class="fw-bold fs-5 mt-auto">1500 ₽ / урок</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <a class="btn btn-primary" href="product.html">Подробнее</a>
-                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+                        
+                        <p class="card-text text-muted small">Практика речи с носителем языка в мини-группах.</p>
+                        <p class="fw-bold fs-5 mt-auto mb-3">1500 ₽ / урок</p>
+                        
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-primary btn-sm w-100" href="product.html">Подробнее</a>
+                            <button class="btn btn-outline-primary btn-sm w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- КУРС 2: IELTS -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="images/ph3.jpg" class="card-img-top" alt="Подготовка к IELTS" onerror="this.style.display='none'">
                     <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h2 class="card-title h5 mb-0">Подготовка к IELTS</h2>
-                            <span class="badge bg-warning text-dark">Новинка</span>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 flex-shrink-0">
+                                <img src="images/ph3.jpg" class="course-thumbnail" alt="IELTS" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="course-thumbnail-placeholder align-items-center justify-content-center" style="display:none;">
+                                    <small class="text-muted">Фото</small>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="card-title h5 mb-1">Подготовка к IELTS</h2>
+                                <span class="badge bg-warning text-dark">Новинка</span>
+                            </div>
                         </div>
-                        <p class="card-text text-muted">Интенсивный курс для сдачи экзамена на 7.0+.</p>
-                        <p class="fw-bold fs-5 mt-auto">2000 ₽ / урок</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <a class="btn btn-primary" href="product.html">Подробнее</a>
-                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+                        
+                        <p class="card-text text-muted small">Интенсивный курс для сдачи экзамена на 7.0+.</p>
+                        <p class="fw-bold fs-5 mt-auto mb-3">2000 ₽ / урок</p>
+                        
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-primary btn-sm w-100" href="product.html">Подробнее</a>
+                            <button class="btn btn-outline-primary btn-sm w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- КУРС 3: Бизнес -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="images/ph4.jpg" class="card-img-top" alt="Бизнес-английский" onerror="this.style.display='none'">
                     <div class="card-body d-flex flex-column">
-                        <div class="d-flex justify-content-between align-items-start mb-3">
-                            <h2 class="card-title h5 mb-0">Бизнес-английский</h2>
-                            <span class="badge bg-danger">Скидка</span>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3 flex-shrink-0">
+                                <img src="images/ph4.jpg" class="course-thumbnail" alt="Бизнес-английский" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="course-thumbnail-placeholder align-items-center justify-content-center" style="display:none;">
+                                    <small class="text-muted">Фото</small>
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="card-title h5 mb-1">Бизнес-английский</h2>
+                                <span class="badge bg-danger">Скидка</span>
+                            </div>
                         </div>
-                        <p class="card-text text-muted">Английский для переговоров, презентаций и переписки.</p>
-                        <p class="fw-bold fs-5 mt-auto">1800 ₽ / урок</p>
-                        <div class="d-flex gap-2 mt-3">
-                            <a class="btn btn-primary" href="product.html">Подробнее</a>
-                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+                        
+                        <p class="card-text text-muted small">Английский для переговоров, презентаций и переписки.</p>
+                        <p class="fw-bold fs-5 mt-auto mb-3">1800 ₽ / урок</p>
+                        
+                        <div class="d-flex gap-2">
+                            <a class="btn btn-primary btn-sm w-100" href="product.html">Подробнее</a>
+                            <button class="btn btn-outline-primary btn-sm w-100" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
                         </div>
                     </div>
                 </div>
